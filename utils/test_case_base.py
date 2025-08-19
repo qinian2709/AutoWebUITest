@@ -68,13 +68,6 @@ class TestCaseBase:
             'test_data': self.get_test_data()
         }
     
-    def get_keywords(self) -> List[str]:
-        """获取搜索关键词"""
-        return self.test_data_manager.get_search_keywords()
-    
-    def get_test_users(self) -> List[Dict[str, str]]:
-        """获取测试用户"""
-        return self.test_data_manager.get_test_users()
     
     def get_urls(self) -> Dict[str, str]:
         """获取URL配置"""

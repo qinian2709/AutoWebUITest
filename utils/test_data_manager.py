@@ -129,45 +129,23 @@ class TestDataManager:
             print(f"❌ 解析引用失败: {reference_path}, 错误: {str(e)}")
             return f"${reference_path}"  # 返回原始引用
     
-    def get_search_keywords(self) -> List[str]:
-        """获取搜索关键词列表"""
-        return self._test_data.get("search_keywords", [])
-    
-    def get_test_users(self) -> List[Dict[str, str]]:
-        """获取测试用户列表"""
-        return self._test_data.get("test_users", [])
-    
     def get_urls(self) -> Dict[str, str]:
-        """获取URL配置"""
+        """获取所有URL配置"""
         return self._test_data.get("urls", {})
-    
-    def get_timeouts(self) -> Dict[str, int]:
-        """获取超时配置"""
-        return self._test_data.get("timeouts", {})
-    
+
     def get_url(self, key: str) -> Optional[str]:
         """获取指定URL"""
         urls = self.get_urls()
         return urls.get(key)
     
+    def get_timeouts(self) -> Dict[str, int]:
+        """获取超时配置"""
+        return self._test_data.get("timeouts", {})
+    
     def get_timeout(self, key: str) -> int:
         """获取指定超时时间"""
         timeouts = self.get_timeouts()
         return timeouts.get(key, 10000)
-    
-    def get_test_user(self, index: int = 0) -> Optional[Dict[str, str]]:
-        """获取测试用户"""
-        users = self.get_test_users()
-        if 0 <= index < len(users):
-            return users[index]
-        return None
-    
-    def get_search_keyword(self, index: int = 0) -> Optional[str]:
-        """获取搜索关键词"""
-        keywords = self.get_search_keywords()
-        if 0 <= index < len(keywords):
-            return keywords[index]
-        return None
     
     def get_all_data(self) -> Dict[str, Any]:
         """获取所有测试数据"""
