@@ -1,0 +1,33 @@
+{
+  "search_keywords": [
+    "生产测试",
+    "Prod环境",
+    "正式环境"
+  ],
+  "test_users": [
+    {
+      "username": "prod_user_example",
+      "password": "prod_password_example"
+    }
+  ],
+  "urls": {
+    "baidu": "https://www.baidu.com",
+    "teacherin_user_page": "https://www.teacherin.cn/users/example_user_id"
+  },
+  "teacherin_user_page": {
+    "selectors": {
+      "star_course": "${common.teacherin_user_page_star_course}",
+      "post_course": "${common.teacherin_user_page_post_course}"
+    },
+    "target": {
+      "homepage_title": "${common.teacherin_user_page_homepage_title}",
+      "core_literacy_content": "示例内容",
+      "url_contains": "${common.teacherin_user_page_url_contains}"
+    }
+  },
+  "timeouts": {
+    "short": 10000,
+    "medium": 20000,
+    "long": 60000
+  }
+} 

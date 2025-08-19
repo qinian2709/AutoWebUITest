@@ -1,0 +1,11 @@
+{
+  "teacherin_user_page_star_course": "收藏的课程",
+  "teacherin_user_page_post_course": "发布的课程",
+  "teacherin_user_page_homepage_title": "TeacherIn",
+  "teacherin_user_page_url_contains": "teacherin",
+  "timeout_short": 5000,
+  "timeout_medium": 10000,
+  "timeout_long": 30000,
+  "search_keyword_1": "自动化测试",
+  "search_keyword_2": "Playwright"
+} 

@@ -1,0 +1,33 @@
+{
+  "search_keywords": [
+    "Python",
+    "Playwright",
+    "自动化测试"
+  ],
+  "test_users": [
+    {
+      "username": "test_user_example",
+      "password": "test_password_example"
+    }
+  ],
+  "urls": {
+    "baidu": "https://www.baidu.com",
+    "teacherin_user_page": "https://www.teacherin.cn/users/example_user_id"
+  },
+  "timeouts": {
+    "short": 5000,
+    "medium": 10000,
+    "long": 30000
+  },
+  "teacherin_user_page": {
+    "selectors": {
+      "star_course": "收藏的课程",
+      "post_course": "发布的课程"
+    },
+    "target": {
+      "homepage_title": "${common.teacherin_user_page_homepage_title}",
+      "course_name": "示例课程名称",
+      "url_contains": "${common.teacherin_user_page_url_contains}"
+    }
+  }
+} 

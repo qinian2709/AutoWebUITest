@@ -1,0 +1,33 @@
+{
+  "search_keywords": [
+    "开发测试",
+    "Dev环境",
+    "调试"
+  ],
+  "test_users": [
+    {
+      "username": "dev_user_example",
+      "password": "dev_password_example"
+    }
+  ],
+  "urls": {
+    "baidu": "https://dev.baidu.com",
+    "teacherin_user_page": "https://dev.teacherin.cn/users/example_user_id"
+  },
+  "teacherin_user_page": {
+    "selectors": {
+      "star_course": "${common.teacherin_user_page_star_course}",
+      "post_course": "${common.teacherin_user_page_post_course}"
+    },
+    "target": {
+      "homepage_title": "${common.teacherin_user_page_homepage_title}",
+      "core_literacy_content": "示例内容",
+      "url_contains": "${common.teacherin_user_page_url_contains}"
+    }
+  },
+  "timeouts": {
+    "short": 3000,
+    "medium": 8000,
+    "long": 20000
+  }
+} 
