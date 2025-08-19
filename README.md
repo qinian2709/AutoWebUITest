@@ -1,4 +1,4 @@
-# TI WebUI 自动化测试框架
+# WebUI 自动化测试框架
 
 基于 **Python + Playwright + Allure** 的现代化 WebUI 自动化测试框架，采用 **PO设计模式** 和 **数据驱动** 架构，支持多环境测试、装饰器截图、视频录制等功能。
 
@@ -28,7 +28,7 @@
 ## 📁 项目结构
 
 ```
-TI_webUI/
+webUI/
 ├── config/                     # 配置管理
 │   ├── __init__.py
 │   ├── config.py              # 主配置
