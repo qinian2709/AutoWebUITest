@@ -61,33 +61,6 @@ class Config:
         """环境名称"""
         return self.env_manager.get_current_env()
     
-    @property
-    def TEST_USERS(self) -> list:
-        """测试用户列表"""
-        return self.test_data_manager.get_all_data().get("test_users", [])
-    
-    @property
-    def SEARCH_KEYWORDS(self) -> list:
-        """搜索关键词列表"""
-        return self.test_data_manager.get_all_data().get("search_keywords", [])
-    
-    def get_test_user(self, index: int = 0) -> Dict[str, str]:
-        """获取测试用户"""
-        users = self.TEST_USERS
-        if users and index < len(users):
-            return users[index]
-        return {"username": "", "password": ""}
-    
-    def get_username(self, index: int = 0) -> str:
-        """获取用户名"""
-        user = self.get_test_user(index)
-        return user.get("username", "")
-    
-    def get_password(self, index: int = 0) -> str:
-        """获取密码"""
-        user = self.get_test_user(index)
-        return user.get("password", "")
-    
     def get_screenshot_path(self, filename: str) -> str:
         """获取截图文件路径"""
         return os.path.join(self.SCREENSHOTS_PATH, filename)
